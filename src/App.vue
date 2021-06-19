@@ -1,17 +1,17 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/huawei_umsjtu.png">
-    <HelloWorld msg="Welcome to Your Intelligent Poster Generator!"/>
+    <img alt="logo" src="./assets/huawei_ji.png" width="552" height="200"/>
+    <Intro msg="Welcome to our Intelligent Poster Generator!"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/main.vue'
+import Intro from './components/main.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Intro
   }
 }
 </script>
