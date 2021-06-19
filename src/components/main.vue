@@ -3,6 +3,7 @@
     <h1 style="font-size:30px">{{ msg }}</h1>
     <p style="font-size: x-large">
       Input an image and a text for your product!
+
     </p>
 
   </div>
