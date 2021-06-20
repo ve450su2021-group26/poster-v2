@@ -1,20 +1,23 @@
 <template>
   <div class="hello">
-    <h1 style="font-size:30px">{{ msg }}</h1>
+    <h1 style="font-size:60px">
+      Intelligent
+      <br>
+      Generation of
+      <br>
+      Creative Posters
+    </h1>
     <p style="font-size: x-large">
       Input an image and a text for your product!
-
     </p>
 
   </div>
 </template>
 
 <script>
+
 export default {
-  name: 'Intro',
-  props: {
-    msg: String
-  }
+  name: 'Title'
 }
 </script>
 
