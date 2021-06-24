@@ -1,5 +1,6 @@
 <template>
   <div class="hello">
+    <img alt="logo" src="../assets/huawei_ji.png" width="552" height="200"/>
     <h1 style="font-size:60px">
       Intelligent
       <br>
