@@ -1,5 +1,5 @@
 import Vue from "vue"
-import Router from "_vue-router@3.5.2@vue-router"
+import Router from "vue-router"
 
 import Home from "./views/Home"
 
