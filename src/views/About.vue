@@ -1,5 +1,6 @@
 <template>
   <div id="wrap" :style="{ height: screenHeight + 'px' }">
+    <Navbar></Navbar>
     <div id="main" :style="{ top: nowTop + 'px' }">
       <ul id="pageUl" type="circle">
         <li id="pageUlLi1" class="pageUlLi" :class="{'active': curIndex == 1}">&nbsp;</li>
@@ -20,8 +21,12 @@
 </template>
 
 <script>
+import Navbar from "../components/navbar";
 export default {
-  name: 'Home',
+  name: 'About',
+  components:{
+    Navbar
+  },
   data(){
     return{
       screenWeight: 0,        // 屏幕宽度
