@@ -1,6 +1,7 @@
 <template>
   <div id="about">
-    <Navbar></Navbar>
+    <Navbar />
+<!--    Height = 56-->
     <div id="wrap" :style="{ height: screenHeight + 'px' }">
       <div id="main" :style="{ top: nowTop + 'px' }">
         <ul id="pageUl" type="circle">
@@ -11,7 +12,8 @@
           <li id="pageUlLi5" class="pageUlLi" :class="{'active': curIndex == 5}">&nbsp;</li>
         </ul>
         <div style="background-color: #1b6d85" id="page1" class="page">
-          <img class="" src="../assets/scene.png" alt = "pic" width="403" height="302" align="center">
+          <img class="" src="../assets/scene.png"
+               alt = "pic" width="403" height="302" align="center">
         </div>
         <div style="background-color: #5cb85c" id="page2" class="page"></div>
         <div style="background-color: #8a6d3b" id="page3" class="page"></div>
@@ -31,7 +33,7 @@ export default {
   },
   data(){
     return{
-      screenWeight: 0,        // 屏幕宽度
+      screenWidth: 0,        // 屏幕宽度
       screenHeight: 0,        // 屏幕高度
       index: 1,               // 用于判断翻页
       curIndex: 1,            // 当前页的index
@@ -44,7 +46,7 @@ export default {
     }
   },
   mounted(){
-    this.screenWeight = document.documentElement.clientWidth;
+    this.screenWidth = document.documentElement.clientWidth;
     this.screenHeight = document.documentElement.clientHeight;
     this.main = document.getElementById("main");
     this.obj = document.getElementsByTagName("div");
@@ -74,7 +76,8 @@ export default {
       let delta = event.detail || (-event.wheelDelta);
       // 如果当前滚动开始时间和上次滚动结束时间的差值小于1.5s，则不执行翻页动作，这样做是为了实现类似节流的效果
       if ((this.startTime - this.endTime) > 1500) {
-        if (delta > 0 && parseInt(this.main.offsetTop) >= -(this.screenHeight * (this.pageNum - 2))) {
+        if (delta > 0 && parseInt(this.main.offsetTop) >=
+            -(this.screenHeight * (this.pageNum - 2))) {
           // 向下滚动
           this.index++;
           this.toPage(this.index);
@@ -82,6 +85,13 @@ export default {
           // 向上滚动
           this.index--;
           this.toPage(this.index);
+        }else if (delta > 0 && parseInt(this.main.offsetTop) <
+            -(this.screenHeight * (this.pageNum - 2))) {
+          this.index = 1;
+          this.toPage(1);
+        }else if (delta < 0 && parseInt(this.main.offsetTop) >= 0) {
+          this.index = this.pageNum;
+          this.toPage(this.pageNum);
         }
         // 本次翻页结束，记录结束时间，用于下次判断
         this.endTime = new Date().getTime();
@@ -98,6 +108,7 @@ export default {
   }
 }
 </script>
+
 <style>
 html, body {
   height: 100%;
