@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-md navbar-light" style="background-color: #ffffff;">
+  <nav class="navbar navbar-expand-md navbar-light navbar-fixed-top navbar-transparent" style="background-color: #ffffff;">
     <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
       <ul class="navbar-nav me-auto">
         <li class="nav-item active">
@@ -24,10 +24,9 @@
     <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link" href="#">Right</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <img src="../assets/huawei.png" width="70" height="56" alt="">
+          <img src="../assets/ji.png" width="86" height="56" alt="">
+
         </li>
       </ul>
     </div>
@@ -41,4 +40,13 @@ export default {
 </script>
 
 <style scoped>
+.navbar {
+  z-index:1000;
+  margin-left: 0px;
+}
+
+.navbar-transparent {
+  background:transparent;
+}
+
 </style>
