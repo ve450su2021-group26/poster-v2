@@ -1,21 +1,23 @@
 <template>
-  <div id="wrap" :style="{ height: screenHeight + 'px' }">
+  <div id="about">
     <Navbar></Navbar>
-    <div id="main" :style="{ top: nowTop + 'px' }">
-      <ul id="pageUl" type="circle">
-        <li id="pageUlLi1" class="pageUlLi" :class="{'active': curIndex == 1}">&nbsp;</li>
-        <li id="pageUlLi2" class="pageUlLi" :class="{'active': curIndex == 2}">&nbsp;</li>
-        <li id="pageUlLi3" class="pageUlLi" :class="{'active': curIndex == 3}">&nbsp;</li>
-        <li id="pageUlLi4" class="pageUlLi" :class="{'active': curIndex == 4}">&nbsp;</li>
-        <li id="pageUlLi5" class="pageUlLi" :class="{'active': curIndex == 5}">&nbsp;</li>
-      </ul>
-      <div style="background-color: #1b6d85" id="page1" class="page">
-        <img class="" src="../assets/scene.png" alt = "pic" width="403" height="302" align="center">
+    <div id="wrap" :style="{ height: screenHeight + 'px' }">
+      <div id="main" :style="{ top: nowTop + 'px' }">
+        <ul id="pageUl" type="circle">
+          <li id="pageUlLi1" class="pageUlLi" :class="{'active': curIndex == 1}">&nbsp;</li>
+          <li id="pageUlLi2" class="pageUlLi" :class="{'active': curIndex == 2}">&nbsp;</li>
+          <li id="pageUlLi3" class="pageUlLi" :class="{'active': curIndex == 3}">&nbsp;</li>
+          <li id="pageUlLi4" class="pageUlLi" :class="{'active': curIndex == 4}">&nbsp;</li>
+          <li id="pageUlLi5" class="pageUlLi" :class="{'active': curIndex == 5}">&nbsp;</li>
+        </ul>
+        <div style="background-color: #1b6d85" id="page1" class="page">
+          <img class="" src="../assets/scene.png" alt = "pic" width="403" height="302" align="center">
+        </div>
+        <div style="background-color: #5cb85c" id="page2" class="page"></div>
+        <div style="background-color: #8a6d3b" id="page3" class="page"></div>
+        <div style="background-color: #337ab7" id="page4" class="page"></div>
+        <div style="background-color: #66512c" id="page5" class="page"></div>
       </div>
-      <div style="background-color: #5cb85c" id="page2" class="page"></div>
-      <div style="background-color: #8a6d3b" id="page3" class="page"></div>
-      <div style="background-color: #337ab7" id="page4" class="page"></div>
-      <div style="background-color: #66512c" id="page5" class="page"></div>
     </div>
   </div>
 </template>

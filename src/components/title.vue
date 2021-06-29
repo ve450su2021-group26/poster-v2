@@ -1,14 +1,14 @@
 <template>
   <div class="hello">
     <img alt="logo" src="../assets/huawei_ji.png" width="552" height="200"/>
-    <h1 style="font-size:60px">
+    <h1>
       Intelligent
       <br>
       Generation of
       <br>
       Creative Posters
     </h1>
-    <p style="font-size: x-large">
+    <p style="font-size: xx-large">
       Input an image and a text for your product!
     </p>
 
@@ -24,9 +24,13 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
+@import url('https://fonts.googleapis.com/css2?family=Knewave&display=swap');
+
+h1 {
+  font-family: 'Knewave', cursive;
+  font-size:80px
 }
+
 ul {
   list-style-type: none;
   padding: 0;
