@@ -8,7 +8,9 @@ import 'bootstrap/dist/js/bootstrap.min.js'
 import 'font-awesome/css/font-awesome.min.css'
 import { BootstrapVue,IconsPlugin} from 'bootstrap-vue'
 import 'bootstrap'
+import axios from "axios";
 
+Vue.prototype.$axios = axios
 Vue.config.productionTip = false
 
 new Vue({
