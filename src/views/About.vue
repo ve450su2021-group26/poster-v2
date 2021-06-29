@@ -1,8 +1,8 @@
 <template>
   <div id="about">
-    <Navbar />
-<!--    Height = 56-->
     <div id="wrap" :style="{ height: screenHeight + 'px' }">
+      <Navbar />
+      <!--    Height = 56-->
       <div id="main" :style="{ top: nowTop + 'px' }">
         <ul id="pageUl" type="circle">
           <li id="pageUlLi1" class="pageUlLi" :class="{'active': curIndex == 1}">&nbsp;</li>
