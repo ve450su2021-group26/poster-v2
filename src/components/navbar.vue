@@ -12,9 +12,8 @@
 
     </div>
 
-
     <div class="mx-auto order-0">
-      <a class="navbar-brand mx-auto" href="">VE450 Capstone Design</a>
+      <div class="navbar-brand mx-auto" id="nav-name">VE450 Capstone Design</div>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -46,11 +45,15 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Knewave&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+#nav-name {
+  font-size: 25px;
+}
+
 .navbar {
-  font-family: 'Knewave', cursive;
-  font-size: x-large;
-  z-index: 1000;
+  font-family: 'Playfair Display', serif;
+  z-index: 100;
   margin-left: 0;
 }
 .navbar-transparent {
