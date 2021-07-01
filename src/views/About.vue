@@ -1,8 +1,8 @@
 <template>
   <div id="about">
     <div id="wrap" :style="{ height: screenHeight + 'px' }">
-      <Navbar />
-      <!--    Height = 56-->
+        <Navbar />
+        <!--    Height = 56-->
       <div id="main" :style="{ top: nowTop + 'px' }">
         <ul id="pageUl" type="circle">
           <li id="pageUlLi1" class="pageUlLi" :class="{'active': curIndex == 1}">&nbsp;</li>
@@ -12,8 +12,8 @@
           <li id="pageUlLi5" class="pageUlLi" :class="{'active': curIndex == 5}">&nbsp;</li>
         </ul>
         <div style="background-color: #1b6d85" id="page1" class="page">
-          <img class="" src="../assets/scene.png"
-               alt = "pic" width="403" height="302" align="center">
+          <img class="show" src="../assets/scene.png"
+               alt = "pic" width="403" height="302">
         </div>
         <div style="background-color: #5cb85c" id="page2" class="page"></div>
         <div style="background-color: #8a6d3b" id="page3" class="page"></div>
@@ -42,7 +42,7 @@ export default {
       nowTop: 0,              // 翻屏后top的位置
       pageNum: 0,             // 一共有多少页
       main: Object,
-      obj: Object
+      obj: Object,
     }
   },
   mounted(){
@@ -109,15 +109,15 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 html, body {
   height: 100%;
 }
 
 body, ul, li, a, p, div {
   /*慎删*/
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
 }
 
 #wrap {
@@ -134,6 +134,11 @@ body, ul, li, a, p, div {
   /*谨删*/
   width: 100%;
   margin: 0;
+}
+
+.show{
+  display:block;
+  margin:0 auto;
 }
 
 #pageUl {
