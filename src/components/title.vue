@@ -30,7 +30,11 @@ h1 {
   font-family: 'Knewave', cursive;
   font-size:80px
 }
-
+p {
+  font-family: 'Knewave', cursive;
+  font-size: xx-large;
+  color: #62cfff
+}
 ul {
   list-style-type: none;
   padding: 0;

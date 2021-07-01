@@ -1,6 +1,5 @@
 <template>
   <div id="home">
-
     <div id="front">
       <Navbar/>
       <div id="title">
@@ -10,7 +9,7 @@
 
     <div id="bottom">
       This is a testing component for uploading img
-      <uploader></uploader>
+      <uploader/>
     </div>
   </div>
 </template>
@@ -33,7 +32,7 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e5
+  color: #000000;
 }
 
 #title {
