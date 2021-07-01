@@ -1,6 +1,8 @@
 <template>
   <div class="hello">
-    <img alt="logo" src="../assets/huawei_ji.png" width="552" height="200"/>
+    <br>
+    <br>
+    <br>
     <h1>
       Intelligent
       <br>
@@ -8,6 +10,7 @@
       <br>
       Creative Posters
     </h1>
+    <br>
     <p style="font-size: xx-large">
       Input an image and a text for your product!
     </p>
