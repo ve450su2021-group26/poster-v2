@@ -9,13 +9,18 @@ import 'font-awesome/css/font-awesome.min.css'
 import { BootstrapVue,IconsPlugin} from 'bootstrap-vue'
 import 'bootstrap'
 import axios from "axios";
-
 Vue.prototype.$axios = axios
 Vue.config.productionTip = false
-
+Vue.prototype.axios = axios
+Vue.config.productionTip = false
+/* eslint-disable no-new */
 new Vue({
   el: "#app",
   router: routes,
+  components: {
+    App
+  },
+  template: '<App/>',
   render: h => h(App),
 }).$mount('#app')
 
