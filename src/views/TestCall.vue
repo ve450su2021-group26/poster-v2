@@ -3,19 +3,25 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
-  name: "TestCall"
-}
-
-methods:{
-  callAlg() {
-    this.axios({
-      method: 'post',
-      url:'/test',
-      data: {'url': "baidu.com"},
-    })
+  name: "TestCall",
+  data(){
+    return {
+      episodes:['baidu.com'],
+    };
+  },
+  methods: {
+    callAlg() {
+      const path = "http://localhost:5000/test";
+      axios.post(path, this.episodes)
+    }
+  },
+  created(){
+    this.callAlg();
   }
-}
+};
+
 </script>
 
 <style scoped>
