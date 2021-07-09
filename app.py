@@ -1,5 +1,5 @@
 import json
-from flask import Flask
+from flask import Flask, jsonify
 from flask import request
 from flask_cors import CORS
 
@@ -13,6 +13,9 @@ app = Flask(
 
 # CORS(app, resources={r'/*': {'origins': '*'}})
 CORS(app)
+@app.route('/', methods=['GET'])
+def ping_pong():
+    return jsonify('Hello World!')
 
 @app.route("/test", methods =["POST"])
 def get_from_json():
@@ -23,4 +26,4 @@ def get_from_json():
 #     print(request.get_json()['url'])
 
 if __name__ == '__main__':
-    app.run(port=5000)
+    app.run()
