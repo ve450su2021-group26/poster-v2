@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import 'bootstrap/dist/js/bootstrap.min.js'
 import 'font-awesome/css/font-awesome.min.css'
-import { BootstrapVue,IconsPlugin} from 'bootstrap-vue'
+import {BootstrapVue, BootstrapVueIcons, FormPlugin, IconsPlugin} from 'bootstrap-vue'
 import 'bootstrap'
 import axios from "axios";
 
@@ -21,3 +21,5 @@ new Vue({
 
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
+Vue.use(BootstrapVueIcons)
+Vue.use(FormPlugin)

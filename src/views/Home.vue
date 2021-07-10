@@ -7,22 +7,17 @@
       </div>
     </div>
 
-    <div id="bottom">
-      This is a testing component for uploading img
-      <uploader/>
-    </div>
   </div>
 </template>
 
 <script>
 import Title from '../components/title';
 import Navbar from "../components/navbar";
-import uploader from "../components/uploader";
 
 export default {
   name: "Home",
   components: {
-    Title, Navbar, uploader
+    Title, Navbar
   },
 }
 </script>

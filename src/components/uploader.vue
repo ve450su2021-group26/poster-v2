@@ -1,6 +1,72 @@
 <template>
   <div class="content">
-    <input id="file" type="file" @change='upLoad($event)'>
+
+    <div id="upload">
+
+      <b-button v-b-modal.modal-1 pill size="lg"
+                variant="outline-success"
+                @click="modalShow = !modalShow"
+      >
+        Upload your photo
+      </b-button>
+
+      <b-modal id="modal-1" v-model="modalShow" title="Intelligent Poster Generator">
+
+        <!--        <b-form v-if="show" @reset="onReset" @submit="onSubmit">-->
+        <!--          <b-form-group-->
+        <!--              id="input-group-1"-->
+        <!--              description="We'll never share your email with anyone else."-->
+        <!--              label="Email address:"-->
+        <!--              label-for="input-1"-->
+        <!--          >-->
+        <!--            <b-form-input-->
+        <!--                id="input-1"-->
+        <!--                v-model="form.email"-->
+        <!--                placeholder="Enter email"-->
+        <!--                required-->
+        <!--                type="email"-->
+        <!--            ></b-form-input>-->
+        <!--          </b-form-group>-->
+
+        <!--          <b-form-group id="input-group-2" label="Your Name:" label-for="input-2">-->
+        <!--            <b-form-input-->
+        <!--                id="input-2"-->
+        <!--                v-model="form.name"-->
+        <!--                placeholder="Enter name"-->
+        <!--                required-->
+        <!--            ></b-form-input>-->
+        <!--          </b-form-group>-->
+
+        <!--          <b-form-group id="input-group-3" label="Food:" label-for="input-3">-->
+        <!--            <b-form-select-->
+        <!--                id="input-3"-->
+        <!--                v-model="form.food"-->
+        <!--                :options="foods"-->
+        <!--                required-->
+        <!--            ></b-form-select>-->
+        <!--          </b-form-group>-->
+
+        <!--          <b-form-group id="input-group-4" v-slot="{ ariaDescribedby }">-->
+        <!--            <b-form-checkbox-group-->
+        <!--                id="checkboxes-4"-->
+        <!--                v-model="form.checked"-->
+        <!--                :aria-describedby="ariaDescribedby"-->
+        <!--            >-->
+        <!--              <b-form-checkbox value="me">Check me out</b-form-checkbox>-->
+        <!--              <b-form-checkbox value="that">Check that out</b-form-checkbox>-->
+        <!--            </b-form-checkbox-group>-->
+        <!--          </b-form-group>-->
+
+        <!--          <b-button type="submit" variant="primary">Submit</b-button>-->
+        <!--          <b-button type="reset" variant="danger">Reset</b-button>-->
+        <!--        </b-form>-->
+
+        <h1>Upload the object image</h1>
+        <input id="file" type="file" @change='upLoad($event)'>
+        <h1>Enter the text message</h1>
+
+      </b-modal>
+    </div>
   </div>
 </template>
 
@@ -28,7 +94,9 @@ export default {
   name: "uploader",
 
   data() {
-    return {}
+    return {
+      modalShow: false
+    }
   },
 
   mounted: function () {
