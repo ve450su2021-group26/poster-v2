@@ -14,11 +14,11 @@
     <br>
 
     <my_carousel></my_carousel>
+
     <br>
 
     <uploader></uploader>
 
-    <br>
     <br>
     <p>All user photo are automatically deleted
       <br>
