@@ -2,6 +2,8 @@ import * as THREE from '../../node_modules/three/build/three.module.js';
 import {PCFSoftShadowMap} from '../../node_modules/three/build/three.module.js';
 import Stats from '../../node_modules/three/examples/jsm/libs/stats.module.js';
 import { OrbitControls } from '../../node_modules/three/examples/jsm/controls/OrbitControls.js';
+const nameList = ["Wenxin", "Keji", "Jianyue", "Xiqing", "Qingxin", "Fugu", "Shangwu", "Xuanku", "Menghuan"];
+const candidate = [nameList[Math.floor(Math.random()*10)], nameList[Math.floor(Math.random()*10)], nameList[Math.floor(Math.random()*10)]];
 let camera, scene, renderer, rayCaster, controls;
 let stats, container;
 let INTERSECTED;
@@ -65,7 +67,7 @@ function init() {
     camera.position.set(0, 0, num*3+14);
     //initialize the scene
     scene = new THREE.Scene();
-    scene.add(new THREE.AmbientLight(0xffffff, 0.3));
+    scene.add(new THREE.AmbientLight(0xffffff, 0.5));
     scene.add(outside);
     //initialize the renderer
     renderer = new THREE.WebGLRenderer();
@@ -91,9 +93,11 @@ function init() {
     }
     //initialize poster and light array
     for (let i = 0; i < num; i++) {
-        let plane = new THREE.PlaneGeometry(5, 5, 32);
+        let plane = new THREE.PlaneGeometry(5, 4, 32);
+        const texture = new THREE.TextureLoader().load("./"+candidate[i]+".png");
+
         //now just set the material and color as random
-        const object = new THREE.Mesh(plane, new THREE.MeshLambertMaterial({color: Math.random() * 0xffffff}));
+        const object = new THREE.Mesh(plane, new THREE.MeshLambertMaterial({color: 0xffffff, map: texture, emissiveIntensity: 0.5,emissive: 0xffffff, emissiveMap: texture}));
         //set the position ans rotation of the objects
         object.position.x = 5 * Math.pow(-1, i % 2);
         object.position.y = 0;
@@ -121,7 +125,7 @@ function init() {
         //var helper = new THREE.CameraHelper( spotLight.shadow.camera );
         //scene.add( helper );
         posterPairs[i] = {poster: object, light: spotLight};
-        loadText("asdasd", 5 * Math.pow(-1, i % 2), 3, num*3+8-3*i, -Math.PI / 6 * Math.pow(-1, i % 2), i);
+        loadText(candidate[i], 5 * Math.pow(-1, i % 2), 3, num*3+8-3*i, -Math.PI / 6 * Math.pow(-1, i % 2), i);
     }
     scene.add(inter);
 }
@@ -172,7 +176,8 @@ function render(){
             posterPairs[ind]["text"].material.emissive.setHex( 0xff0000 );
             //set the case when some object is selected and the mouse clicked
             document.onclick = function (e){
-                console.log(ind);
+                console.log("./"+candidate[ind]+".html");
+                window.open("./"+candidate[ind]+".html");
             }
         }
     //recome to the original color
